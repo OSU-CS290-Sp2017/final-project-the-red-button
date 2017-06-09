@@ -1,0 +1,33 @@
+{{main}}
+{{> header}}
+
+<main class= "container">
+
+  <div class= "button">
+    <map name= "clickMap" id= "map">
+        <area shape="circle" coords= "250px, 250px, 170px" href="#">
+    </map>
+    <img class= "button-image" src="RedButton.jpg" usemap= "#clickMap">
+
+    {{#with wordData.[0]}}
+      {{>button}}
+      {{>display}}
+    {{/with}}
+
+    <div class= "word-container-left">
+      {{#with wordData.[2]}}
+        {{>left}}
+      {{/with}}
+    </div>
+
+    <div class= "word-container-right">
+      {{#with wordData.[1]}}
+          {{>right}}
+      {{/with}}
+    </div>
+  </div>
+
+
+  {{>edit}}
+  {{>footer}}
+</main>

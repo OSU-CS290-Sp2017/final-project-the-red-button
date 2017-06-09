@@ -1,0 +1,177 @@
+.title{
+  color: #ff0000;
+  text-align: center;
+  font-size: 60px;
+  text-decoration: underline;
+}
+
+header{
+  background-color: #96c8f3;
+  border: 1px solid;
+  padding: 5px 5px;
+}
+
+body{
+  margin: 0;
+}
+
+.button{
+  position: relative;
+  text-align: center;
+}
+
+.button-image{
+
+}
+
+.button-text{
+  position: absolute;
+  top: 25%;
+  left: 30%;
+  right: 30%;
+  font-size: 80px;
+  cursor: pointer;
+}
+
+.word-container-left{
+  text-align: left;
+  position: absolute;
+  margin-left: 4%;
+  left: 0;
+  right: 75%;
+  top: 20%;
+  bottom: 20%;
+  background-color: #e5e7e9;
+  border: 5px double black;
+  border-radius: 50px;
+}
+
+.text-left{
+  margin: 0;
+  padding: 0 15px;
+  text-align: center;
+  font-size: 25px;
+}
+
+.word-container-right{
+  text-align: right;
+  position: absolute;
+  margin-right: 4%;
+  left: 75%;
+  right: 0;
+  top: 20%;
+  bottom: 20%;
+  background-color: #e5e7e9;
+  border: 5px double black;
+  border-radius: 50px;
+}
+
+.text-right{
+  margin: 0;
+  padding: 0 15px;
+  text-align: center;
+  font-size: 25px;
+}
+
+footer{
+  position: relative;
+}
+
+.edit-button{
+  position: absolute;
+  width: 150px;
+  right: 25px;
+  bottom: 15px;
+  border-radius: 50px;
+  justify-content: center;
+  background-color: #aeafb4;
+  cursor: pointer;
+}
+
+.edit-button-text{
+  margin: 10px 2px;
+  font-size: 25px;
+}
+
+.hidden{
+  display: none;
+}
+
+#backdrop{
+  background-color: rgba(0,0,0,0.86);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+#create-display{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1010;
+}
+
+.display{
+  width: 800px;
+  height: 200px;
+  text-align: center;
+  margin: 150px auto;
+  background-color: #ff2b2b;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.that-was-text{
+  display: block;
+  padding-top: 50px;
+  font-size:80px;
+  text-decoration: none;
+  color: black;
+}
+
+.vanish{
+  display: none;
+}
+
+.text-edit{
+  width: auto;
+  max-width: 600px;
+  min-width: 350px;
+  min-height: 220px;
+  margin: 80px auto;
+  background-color: #ff2b2b;
+  border-radius: 30px
+}
+
+.edit-input{
+  align-items: center;
+  display:flex;
+  font-size: 40px;
+  padding: 60px 55px 30px 55px;
+}
+
+.edit-text-lable{
+  padding-right: 15px;
+}
+
+#edit-text-input{
+  font-size: 40px;
+  width: 300px;
+  height: 50px;
+  padding-top: 5px;
+  text-decoration: solid;
+}
+
+.cancel-button{
+  margin: 0px 315px 0px 55px;
+  font-size: 30px;
+}
+
+.ok-button{
+  font-size: 30px;
+}
