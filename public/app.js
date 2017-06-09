@@ -33,7 +33,6 @@ function storeData(word, side){
 }
 
 ////////Model = visable////////
-var leftRight = 0;
 function unHide (event){
   for(var i = 0; i != buttonTextModle.length; i++){
     buttonTextModle[i].style.display = "block";
@@ -48,17 +47,19 @@ function unHide (event){
     textArray.push(check);
 
     //Add new word to left/right containers
-    if (leftRight == 0){
+    var rightNum = document.getElementsByClassName('word-container-right')[0].getElementsByTagName('p').length;
+    var leftNum = document.getElementsByClassName('word-container-left')[0].getElementsByTagName('p').length;
+
+    if (leftNum <= rightNum){
       var leftContainer = document.getElementsByClassName('word-container-left')[0];
       var leftParagraph = document.createElement('p');
       leftParagraph.setAttribute('id','word-left');
       leftParagraph.setAttribute('class','text-left');
       leftParagraph.textContent = check;
       leftContainer.appendChild(leftParagraph);
-      leftRight++;
       storeData(check, 'left');
 
-    } else if(leftRight == 1){
+    } else if(rightNum < leftNum){
 
       var rightContainer = document.getElementsByClassName('word-container-right')[0];
       var rightParagraph = document.createElement('p');
@@ -66,7 +67,6 @@ function unHide (event){
       rightParagraph.setAttribute('class','text-right');
       rightParagraph.textContent = check;
       rightContainer.appendChild(rightParagraph);
-      leftRight--;
       storeData(check, 'right');
     }
 

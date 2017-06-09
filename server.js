@@ -19,17 +19,18 @@ app.use(bodyParser.json());
 app.get('/', function(req, res, next){
   var data = JSON.parse(fs.readFileSync('buttonData.json'));
 
-  if (data == ''){ //Always start with 'easy' if json is null
+  /*if (data == ''){ //Always start with 'easy' if json is null
     data.push('easy');
     fs.writeFileSync('buttonData.json', JSON.stringify(data, null, 2));
     var textData = {
       wordData: "easy"
     };
-  } else {
+  } else {*/
+
     var textData = {
-        wordData: buttonData
+        wordData: data
     };
-  }
+  //}
   res.render('index', textData);
 });
 
@@ -52,9 +53,9 @@ app.post('/', function(req, res, next){
       array.push(sendData);
     }
   }
-  //fail(button, req.body.button);
-  //fail(right, req.body.right);
-  //fail(left, req.body.left);
+  fail(button, req.body.button);
+  fail(right, req.body.right);
+  fail(left, req.body.left);
 
   fs.writeFileSync('buttonData.json', JSON.stringify(data, null, 2));
 });
